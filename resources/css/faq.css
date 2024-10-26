@@ -1,0 +1,461 @@
+/* Universal CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/* Body Styles */
+body {
+    background-color: #f6fff1;
+    min-height: 100vh;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 200px; 
+    background-color: #f6fff1;
+    padding: 100px 20px 50px 20px;
+    margin-bottom: 50px;
+
+}
+.header .menu {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;  
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header button:hover {
+    color: #768459;
+    transform: translateY(-2px);
+    background-color: #768459;
+}
+
+.header button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #768459;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.header button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
+
+/* Left Section */
+.header_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header_left .menu {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.basket-logo{
+    height:30px;
+    width: auto;
+}
+.account-logo{
+    height:30px;
+    width: auto;
+}
+.search-logo{
+    height:30px;
+    width:auto;
+}
+/* Style for the search input field */
+.search-container:hover .search-input {
+    width: 150px;  /* Expand the width of the input */
+    opacity: 1;    /* Make the input fully visible */
+}
+
+.search-input {
+    border: none;
+    border-bottom: 2px solid #768459; /* Set the line color to #768459 */
+    outline: none;
+    font-size: 16px;
+    color: #768459; /* Set the text color to #768459 */
+    background-color: transparent;
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+/* Style for the search button */
+.search {
+    position: relative;
+    z-index: 2;  /* Keep the button above the input field */
+    color: #768459; /* Set the button text color to #768459 */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search:hover {
+    transform: translateY(-2px);
+}
+
+.search:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #768459;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.search.clicked::after {
+    content: none; /* Remove the underline when the button is clicked */
+}
+
+
+
+
+/* Center Section (Logo) */
+.header_center {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_center .logo {
+    height: 100%;
+    width: auto;
+    max-height: 180px; /* Slightly less than header height for spacing */
+}
+
+/* Right Section */
+.header_right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header_right button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Hamburger Menu */
+.menu-container {
+    position: relative;
+    display: inline-block;
+    border: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+
+.menu-text {
+    display: inline-block;
+}
+
+
+.menu:hover {
+    color: #111;
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d7fb9d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #66a106;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.bar {
+    width: 26px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: #768459;
+}
+
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+
+.sign-in{ 
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.sign-in .icon-svg {
+    margin-right: 8px;
+
+.sign-in:hover{
+    background-color: #072408;
+}/* main */
+
+
+/* Base Styles */
+
+
+/* FAQ Container */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;  /* Centered on the page */
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+/* FAQ Question */
+.faq-question {
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    padding-right: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Add "+" icon */
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate "+" when active */
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+
+/* Hover effect on questions */
+.faq-question:hover {
+    color: #2a7c6c;
+}
+
+/* FAQ Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Expand answers when active */
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    margin-top: 10px;
+}
+
+/* Answer content */
+.faq-answer p {
+    padding-left: 10px;
+    border-left: 3px solid #2a7c6c;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .faq-container {
+        padding: 15px 20px;
+    }
+
+    .faq-question {
+        font-size: 1em;
+    }
+}
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+
+
+ .footer-content {
+    background-color: #66a106 !important;
+    padding: 20px;
+    text-align: center;
+    width:100%;
+    height: 100px;
+    box-sizing: border-box;
+    z-index:1;
+    font-size: 20px;
+}
+
+
+
+.logo2 {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.footer button {
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #66a106;
+    color: #fff;  /* Updated to ensure the text contrasts well with the background */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer button:hover {
+    color: #f6fff1; /* Light background color to contrast well with the green */
+    transform: translateY(-2px);
+    background-color: #88c44f; /* Lighter green for a nice visual change */
+}
+
+.footer button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

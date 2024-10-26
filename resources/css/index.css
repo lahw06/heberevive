@@ -1,0 +1,474 @@
+/* Universal CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/* Body Styles */
+body {
+    background-color: #f6fff1;
+    min-height: 100vh;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 200px; 
+    background-color: #f6fff1;
+    padding: 100px 20px 50px 20px;
+    margin-bottom: 50px;
+
+}
+.header .menu {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;  
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header button:hover {
+    color: #768459;
+    transform: translateY(-2px);
+    background-color: #768459;
+}
+
+.header button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #768459;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.header button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
+
+/* Left Section */
+.header_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header_left .menu {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.basket-logo{
+    height:30px;
+    width: auto;
+}
+
+
+
+
+
+/* Center Section (Logo) */
+.header_center {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_center .logo {
+    height: 100%;
+    width: auto;
+    max-height: 180px; /* Slightly less than header height for spacing */
+}
+
+/* Right Section */
+.header_right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header_right button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Hamburger Menu */
+.menu-container {
+    position: relative;
+    display: inline-block;
+    border: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+
+.menu-text {
+    display: inline-block;
+}
+
+
+.menu:hover {
+    color: #111;
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d7fb9d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #66a106;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.bar {
+    width: 26px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: #768459;
+}
+
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+
+.sign-in{ 
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.sign-in .icon-svg {
+    margin-right: 8px;
+}
+
+.sign-in:hover{
+    background-color: #072408;
+}
+
+/*main*/
+
+
+
+.mainpage-gif {
+    width: 100vw; /* Viewport width to ensure it takes the full width of the screen */
+    height: auto; /* Keeps the aspect ratio of the GIF intact */
+    display: block; /* Removes any inline spacing */
+    margin: 0; /* Removes any default margin */
+}
+
+.quote {
+    display: block;                /* Ensure the span behaves like a block element */
+    text-align: center;            /* Center the text horizontally */
+    font-size: 1.8em;              /* Increase font size */
+    padding-top: 100px;            /* Add padding to move it lower on the page */
+    width: 70%;                    /* Make sure it doesn't span the full width */
+    margin: 0 auto;                /* Center the block horizontally */
+    max-width: 800px;              /* Restrict the maximum width */
+    color: #768459;                /* Set color for emphasis, if desired */
+}
+
+.mission {
+    text-align: center;            /* Center the text horizontally */
+    font-size: 1.5em;              /* Increase font size for readability */
+    padding-top: 20px;             /* Add some spacing after the quote */
+    width: 70%;                    /* Limit the width */
+    margin: 0 auto;                /* Center the block horizontally */
+    max-width: 800px;              /* Restrict the maximum width */
+    line-height: 1.6;              /* Improve readability by increasing line spacing */
+    color: #333;                   /* Define a color for the text for better contrast */
+}
+
+/* Additional styles for the main container if needed */
+main {
+    padding-top: 100px;            /* Move the entire main container down */
+    padding-bottom: 50px;          /* Add some padding to the bottom for spacing */
+}
+
+a:hover {
+    background-color: #88c44f; /* A lighter green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    transform: translateY(-3px); /* Move slightly up for an interactive feel */
+}
+
+
+
+
+
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+
+
+ .footer-content {
+    background-color: #778559;
+    padding: 20px;
+    text-align: center;
+    width:100%;
+    height: 100px;
+    box-sizing: border-box;
+    z-index:1;
+    font-size: 20px;
+}
+
+
+
+.logo2 {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.footer button {
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #778559;
+    color: #fff;  /* Updated to ensure the text contrasts well with the background */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer button:hover {
+    color: #f6fff1; /* Light background color to contrast well with the green */
+    transform: translateY(-2px);
+    background-color: #778559; /* Lighter green for a nice visual change */
+}
+
+.footer button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* Remove all decorations, borders, outlines, and transitions globally for links and images */
+a, img {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Specifically target the social icons */
+.social-icon a, 
+.social-icon img {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important; /* Ensure no background is applied */
+     /* Disable any hover or focus transitions */
+}
+
+/* Disable hover styles for all elements globally */
+a:hover, img:hover, .social-icon:hover {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    transform: none;
+}
+
+
+/* Social icons hover effect */
+.social-icon {
+    margin: 0 10px;
+    transition: transform 0.3s ease !important;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) !important;
+}
+
+/* Ensure no unwanted hover effects */
+.social-icon img:hover {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Dropdown menu item styling */
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    background-color: transparent;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.dropdown-menu a:hover {
+background-color: #66a106 !important; /* Green background on hover */
+   color:#f6fff1;
+}
+
+/* General styles for all buttons in the main section */
+.mission-link {
+    background-color: #768459; /* Default background color */
+    color: #f6fff1;            /* Default text color */
+    padding: 10px 20px;
+    text-decoration: none;      /* Remove underline */
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1em;
+}
+
+/* Hover effect for all mission-link buttons */
+.mission-link:hover {
+    background-color: #66a106 !important; /* Change background on hover */
+    color: #f6fff1 !important;            /* Ensure text stays visible */
+}
+
+/* Specific targeting for the button within the quote and mission section */
+#button-container .mission-link {
+    margin-top: 20px;  /* Spacing between the quote and button */
+}
+
+/* Specific targeting for the button under Product Image 1 */
+.product-images-container div:nth-child(1) .mission-link {
+    margin-top: 10px; /* Spacing above the button */
+    background-color: #768459; /* Same as original color */
+}
+
+/* Specific targeting for the button under Product Image 2 */
+.product-images-container div:nth-child(3) .mission-link {
+    margin-top: 10px; /* Spacing above the button */
+    background-color: #768459; /* Same as original color */
+}
