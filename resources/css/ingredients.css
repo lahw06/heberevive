@@ -30,6 +30,8 @@ body {
     color: #778559;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: sticky;
+    top:0;
 }
 
 .ingredient-box:hover {
