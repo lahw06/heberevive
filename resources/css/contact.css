@@ -162,7 +162,7 @@ form#contactForm button:hover {
 @media (max-width: 768px) {
     .contact-container {
         padding: 10px 15px;
-        margin-top: 0 !important;
+       
       
     }
     .contact-main{
