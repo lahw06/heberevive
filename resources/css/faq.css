@@ -89,6 +89,15 @@
     text-decoration: none;
     text-align: center;
 }
+.faq-answer a{
+    text-decoration: none;
+    color:#778559;
+}
+.changea{
+    text-decoration: none;
+    color:#778559;
+    font-weight: bold;
+}
 
 
 
