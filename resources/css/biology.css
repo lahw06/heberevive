@@ -346,20 +346,23 @@ main{
 @media (max-width: 768px) {
    
     html, body {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
         margin: 0;
-        padding: 0;
+    padding: 0;
         width: 100%;
     }
-    
     * {
+       
         box-sizing: border-box;
-        max-width: 100%;
     }
-    section, div, header {
+
    
-    }
-     .intro-header {
+    
+        
+  
+    
+    
+    .intro-header {
         width: 100%;
         padding: 5px !important;
         text-align: center;
@@ -383,6 +386,10 @@ main{
     .dermis-section, .epidermis, .subcutis-section, .nail-section, .function-section{
         padding:0px !important;
     }
+    main, .epidermis, .dermis-section, .intro-header {
+        overflow-x: hidden;
+    }
+    
 
     .epidermis .anatomy-content {
         flex-direction: column;
@@ -430,7 +437,7 @@ main{
     .dermis-section .image-container {
         position: relative !important;
         width: 100% !important;
-        margin: 0 auto !important;
+        margin: 0px !important;
         padding: 0 !important;
         display: flex !important;
         justify-content: center !important;
@@ -444,16 +451,15 @@ main{
         margin: 0 auto !important;
         padding: 0 !important;
         position: relative !important;
-        left: 0 !important;
-        right: 0 !important;
+        
         
     }
     .dermis-section .image-overlay {
         background-color: #f6fff1 !important;
         position: absolute !important;
-        top: -20px !important; /* Move higher */
-        left: 0 !important;
-        width: 100% !important;
+        top: -20px !important;
+     
+        width: 70% !important;
         height: 50px !important;
         z-index: 10 !important;
     }
@@ -498,9 +504,10 @@ main{
     }
 
     .subcutis-section .image-container img {
-        height: 300px !important;
+        height: 240px !important;
         width: auto;
         margin: 0 auto;
+        padding-left: 10px;
     }
 
     .subcutis-section .text-container {
