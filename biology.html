@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hebe Revive | Skin Science</title>
-    
-    
-
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/biology.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Left Section: Menu -->
         <div class="header_left">
             <div class="menu-container">
-                <button class="menu" aria-label="Open Menu" style="background-color: transparent; color: #333; border: none; font-size: 18px; cursor: pointer; padding: 10px 15px;  display: inline-block;">
+                <button class="menu" aria-label="Open Menu">
                     <div class="menu-icon">
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -32,52 +30,27 @@
                 </div>
             </div>
         </div>
-        
-        
-        <!-- Center Section: Logo -->
         <div class="header_center">
             <a href="index.html"><img id="logo" class="logo" src="./resources/images/hebe-logo.png" alt="Hebe Revive Logo"></a>
         </div>
-        
-       
-<div class="header_right">
-   
-   
-    <div class="search-container" style="position: relative; display: inline-block;">
-       
-    
-   
-    
-    <button class="basket" aria-label="Basket" style="background-color: transparent; color: #333; border: none; font-size: 18px; cursor: pointer; padding: 10px 15px;  display: inline-block;" onclick="window.location.href='basket.html'">
-        <i class="fas fa-shopping-cart"></i><img class="basket-logo" src="resources\images\basket-logo.png">
-    </button>
-
-  
-    
-    
-    
-    
-</div>
-
+        <div class="header_right">
+            <button class="basket" aria-label="Basket" onclick="window.location.href='basket.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <img class="basket-logo" src="resources/images/basket-logo.png">
+            </button>
+        </div>
     </header>
-    
-    <!-- Main Content -->
-
-    <header style="background-color: #778559; padding: 40px; text-align: center;">
-        <h1 style="color: #fff; font-size: 2.5em; margin: 0;">Understanding Your Skin</h1>
-        <p style="color: #fff; font-size: 1.2em; max-width: 800px; margin: 20px auto;">Take a journey into the layers of your skin and uncover the science behind its structure and function. Explore how it protects and adapts every day.</p>
+    <main>
+    <header class="intro-header">
+        <h1>Understanding Your Skin</h1>
+        <p>Take a journey into the layers of your skin and uncover the science behind its structure and function. Explore how it protects and adapts every day.</p>
     </header>
-
-    <!-- Video Section -->
-    
-
-    <!-- Anatomy Section -->
-    <section style="background-color: #fafff8; padding: 60px 20px; position: relative;">
-        <div style="max-width: 1600px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div style="flex: 1 1 50%; padding: 20px;padding-left:200px;">
-                <h2 style="color: #778559; font-size: 2em; padding-bottom:20px;">The Layers of Your Skin</h2>
-                <h3 style="color: #778559; font-size: 1.5em;">Epidermis (Outermost Layer)</h3>
-                <ul style="color: #778559; line-height: 1.8;">
+    <section class="anatomy-section epidermis">
+        <div class="anatomy-content">
+            <div class="anatomy-text">
+                <h2>The Layers of Your Skin</h2>
+                <h3>Epidermis (Outermost Layer)</h3>
+                <ul>
                     <li><strong>Stratum Corneum:</strong> The most superficial layer contains cells with thick, waterproof membranes. There are few desmosomes (adhesive proteins) holding them together, allowing easy shedding and marking the end of keratinization.</li>
                     <li><strong>Stratum Lucidum:</strong> In this layer, keratinocytes have lost their nuclei and have indistinct borders. It is typically a very thin layer, often visible only under a microscope in areas of thick, hairless skin.</li>
                     <li><strong>Stratum Granulosum:</strong> Here, keratinocytes are filled with keratohyalin granules that bind keratin filaments together. This layer also produces lipid-rich lamellar bodies, enabling the skin's waterproofing.</li>
@@ -86,76 +59,70 @@
                     <li><strong>Basement Membrane:</strong> A functionally active extracellular matrix that anchors the epidermis to the dermis.</li>
                 </ul>
             </div>
-            <div style="flex: 1 1 40%; text-align: center;">
-                <img src="resources\images\epidermis.png" alt="Epidermis Diagram" style="max-width: auto; height: 750px; padding-left: 60px; padding-top:60px;">
+            <div class="anatomy-image">
+                <img src="resources/images/epidermis.png" alt="Epidermis Diagram">
             </div>
         </div>
     </section>
-
-    <section style="background-color: #f6fff1; padding: 60px 20px; position: relative;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div style="flex: 1 1 50%; padding: 20px;">
-               
-                <h3 style="color: #778559; font-size: 1.5em;">Dermis</h3>
-                <ul style="color: #778559; line-height: 1.8;">
+    
+    <section class="dermis-section">
+        <div class="content-container">
+            <div class="text-container">
+                <h3>Dermis</h3>
+                <ul>
                     <li>The dermis provides structural support, elasticity, and nourishment through its fibrous connective tissues, including collagen and elastin, which are organized into Langer's lines.</li>
                     <li>It also contains blood and lymphatic vessels, nerves, and sensory receptors, along with hair follicles, arrector pili muscles, sebaceous glands, and sweat glands. All of which are essential for temperature regulation, hydration, and sensation.</li>
-                    
                 </ul>
             </div>
-            <div style="flex: 1 1 40%; padding: 20px; text-align: center; position: relative;">
-                <img src="resources/images/dermis.png" alt="Dermis Diagram" style="max-width: 100%; height: auto; padding-left:60px; padding-bottom:90px;">
-                <div style="position: absolute; top: 20px; left: 60px; width: calc(100% - 60px); height: 50px; background-color: #f6fff1;"></div>
+            <div class="image-container">
+                <img src="resources/images/dermis.png" alt="Dermis Diagram">
+                <div class="image-overlay"></div>
             </div>
-            
         </div>
     </section>
 
-    <section style="background-color: #f0ffe7; padding: 60px 20px; position: relative;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div style="flex: 1 1 50%; padding: 20px;">
-                
-                <h3 style="color: #778559; font-size: 1.5em;">Subcutis (Fat Layer)</h3>
-                <ul style="color: #778559; line-height: 1.8;">
+    
+    <section class="subcutis-section">
+        <div class="content-container">
+            <div class="text-container">
+                <h3>Subcutis (Fat Layer)</h3>
+                <ul>
                     <li>The subcutis is a layer of loose connective tissue between the skin and muscle fascia, containing white adipose tissue for insulation, energy storage, and protection.</li>
                     <li>It also includes small tendons from underlying muscles to aid in movement and varies in thickness depending on the amount of fat present.</li>
-                    
                 </ul>
             </div>
-            <div style="flex: 1 1 40%; padding: 20px; text-align: center;">
-                <img src="resources/images/histo.jpeg" alt="Skin Histology Diagram" style="max-width: 100%; height: auto; margin-left:70px; border-radius: 2px;  transition: transform 0.3s;">
+            <div class="image-container">
+                <img src="resources/images/histo.jpeg" alt="Skin Histology Diagram">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="function-section">
+        <h2>How Your Skin Works</h2>
+        <div class="function-content">
+            <div class="function-card">
+                <h3>Protection and Immune Defense</h3>
+                <p>The skin acts as a shield, protecting the body from physical injury and harmful pathogens like bacteria and viruses. It serves as a physical barrier and utilizes immune cells such as Langerhans cells, which destroy invaders and can travel through the body to alert the secondary immune system to respond to threats. Additionally, the skin protects against UV radiation through melanocytes, which produce melanin to safeguard the DNA of other cells from UV damage.</p>
+            </div>
+            <div class="function-card">
+                <h3>Temperature Regulation</h3>
+                <p>The skin plays a key role in temperature regulation. In cold environments, the skin constricts capillaries in the dermis to retain heat and tightens arrector pili muscles, causing hair to stand up and form an insulating layer. In hot conditions, capillaries dilate, and sweat glands are activated to cool the body by evaporating sweat, releasing heat from the skin. Thermal receptors present can detect heat and send signals to the central nervous system. This triggers reflexes to remove the skin from harmful temperatures and warns the brain to avoid those conditions.</p>
+            </div>
+            <div class="function-card">
+                <h3>Sensation and Wound Healing</h3>
+                <p>The skin detects pressure through mechanoreceptors, pain via nociceptors, and temperature through thermoreceptors, enabling the body to respond to a wide range of stimuli. When the skin is injured, the wound healing process begins with inflammation, attracting immune cells to sterilize the area by removing pathogens and dead tissue. This is followed by the proliferation of new cells and their gradual remodeling into the correct structure, restoring the skin's integrity.</p>
             </div>
         </div>
     </section>
 
-    <!-- Physiology Section -->
-    <section style="padding: 60px 20px; background-color: #778559;">
-        <h2 style="text-align: center; color: #f6fff1; font-size: 2em;">How Your Skin Works</h2>
-        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
-            <div style="flex: 1 1 30%; padding: 20px 40px; text-align: center;">
-                <h3 style="color: #f6fff1; transition: color 0.3s;">Protection and Immune Defense</h3>
-                <p style="color: #fafff8;">The skin acts as a shield, protecting the body from physical injury and harmful pathogens like bacteria and viruses. It serves as a physical barrier and utilizes immune cells such as Langerhans cells, which destroy invaders and can travel through the body to alert the secondary immune system to respond to threats. Additionally, the skin protects against UV radiation through melanocytes, which produce melanin to safeguard the DNA of other cells from UV damage.</p>
-            </div>
-            <div style="flex: 1 1 30%; padding: 20px 40px; text-align: center;">
-                <h3 style="color: #f6fff1; transition: color 0.3s;">Temperature Regulation</h3>
-                <p style="color: #fafff8;">The skin plays a key role in temperature regulation. In cold environments, the skin constricts capillaries in the dermis to retain heat and tightens arrector pili muscles, causing hair to stand up and form an insulating layer. In hot conditions, capillaries dilate, and sweat glands are activated to cool the body by evaporating sweat, releasing heat from the skin. Thermal receptors present can detect heat and send signals to the central nervous system. This triggers reflexes to remove the skin from harmful temperatures and warns the brain to avoid those conditions. </p>
-            </div>
-            <div style="flex: 1 1 30%; padding: 20px 40px; text-align: center;">
-                <h3 style="color: #f6fff1; transition: color 0.3s;">Sensation and Wound Healing</h3>
-                <p style="color: #fafff8;">The skin detects pressure through mechanoreceptors, pain via nociceptors, and temperature through thermoreceptors, enabling the body to respond to a wide range of stimuli. When the skin is injured, the wound healing process begins with inflammation, attracting immune cells to sterilize the area by removing pathogens and dead tissue. This is followed by the proliferation of new cells and their gradual remodeling into the correct structure, restoring the skin's integrity.</p>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Nail Biology Section -->
-    <section style="padding: 60px 20px; background-color: #fafff8;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div style="flex: 1 1 50%; padding: 20px;">
-                <h2 style="color: #778559; font-size: 2em; padding-bottom:20px;">Anatomy of Nails</h2>
-                <h3 style="color: #778559; font-size: 1.2em; padding-bottom:10px; font-weight: 550;">Nails are an extension of the skin and are made of keratinocytes, just like the skin. They serve various functions, including sensation, acting as tools, providing protection for the fingertips, and serving as ornaments.</h3>
-                <ul style="color: #778559; line-height: 1.6;">
+    <section class="nail-section">
+        <div class="content-container">
+            <div class="text-container">
+                <h2>Anatomy of Nails</h2>
+                <h3>Nails are an extension of the skin and are made of keratinocytes, just like the skin. They serve various functions, including sensation, acting as tools, providing protection for the fingertips, and serving as ornaments.</h3>
+                <ul>
                     <li><strong>Nail Plate:</strong> The hard, visible part of the nail made of dead keratinocytes.</li>
                     <li><strong>Free Edge:</strong> The white tip of the nail that extends beyond the nail bed and is not attached to it.</li>
                     <li><strong>Nail Root:</strong> Hidden under the skin, this is the part you can't see, where the nail begins.</li>
@@ -166,67 +133,37 @@
                     <li><strong>Cuticle:</strong> A thin, transparent layer produced by part of the perionychium to seal and protect the nail.</li>
                 </ul>
             </div>
-            <div style="flex: 1 1 40%; padding: 20px; text-align: center;">
-                <img src="resources\images\nail-anatomy.png" alt="Nail Anatomy Diagram" style="max-width: 100%; height: auto; padding-bottom:70px; padding-right:60px;">
+            <div class="image-container">
+                <img src="resources\images\nail-anatomy.png" alt="Nail Anatomy Diagram">
             </div>
         </div>
     </section>
-
     
 
-   
-    
-    
-    <!-- Footer -->
-   <!-- Footer section -->
-<!-- Footer section -->
-<div class="footer">
-    <footer style= "padding: 10px 20px; text-align: center; width: 100%; height: 160px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #768459;">
-        
-        <!-- Left Section: Contact Us, FAQs, Suggestions -->
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-top: auto; margin-bottom: auto;">
-            <div style="position: relative; display: inline-block;">
-                <button class="contact" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='contact.html'">Contact Us</button>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <button class="faqs" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='faq.html'">FAQs</button>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <button class="suggestions" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='suggestions.html'">Suggestions</button>
-            </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="faq.html" class="footer-link">FAQs</a>
+            <a href="suggestions.html" class="footer-link">Suggestions</a>
         </div>
-
-        <!-- Center Section: Social Media Icons (To be added later) -->
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <!-- Social Media Icons -->
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.facebook.com/profile.php?id=61566522524385"><img src="resources/images/fb-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.instagram.com/hebe_revive/profilecard/?igsh=MWZ6b3l4bGp0cGFqMQ=="><img src="resources/images/insta-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.tiktok.com/@hebe_revive"><img src="resources/images/tiktok-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.youtube.com/channel/UCfIiZ2Pf_ioMMIif97nMxow"><img src="resources/images/youtube-logo.png" ></a>
-            </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61566522524385">
+                <img src="resources/images/fb-logo.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/hebe_revive/profilecard/?igsh=MWZ6b3l4bGp0cGFqMQ==">
+                <img src="resources/images/insta-logo.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@hebe_revive">
+                <img src="resources/images/tiktok-logo.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/channel/UCfIiZ2Pf_ioMMIif97nMxow" class="youtube">
+                <img src="resources/images/youtube-logo.png" alt="YouTube">
+            </a>
         </div>
-        
-
-        <!-- Right Section: Logo -->
-        <a href="index.html"><img class="logo2" src="./resources/images/hebe-logo2.png" alt="Footer Logo" style="height: 120px; width: auto; border: none; border-radius: 8px; margin-left: 20px;"></a>
+        <a href="index.html">
+            <img class="logo2" src="./resources/images/hebe-logo2.png" alt="Footer Logo">
+        </a>
     </footer>
-</div>
-
-
-
-
-    
-    
-    
-    
-    <script src="resources/javascript/footer-effects.js"></script>
-
 </body>
 </html>
