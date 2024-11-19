@@ -1,377 +1,572 @@
-/* Universal CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-}
-
-/* Body Styles */
 body {
     background-color: #f6fff1;
     min-height: 100vh;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin-top: 110px;
+    
+}
+.intro-header {
+    background-color: #778559;
+    padding: 40px;
+    text-align: center;
 }
 
-/* Header Styles */
-.header {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    width: 100%;
-    height: 200px; 
+.intro-header h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro-header p {
+    color: #fff;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.epidermis {
+    background-color: #fafff8;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.epidermis .anatomy-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.epidermis .anatomy-text {
+    flex: 1 1 50%;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 40px;
+}
+
+.epidermis h2 {
+    color: #778559;
+    font-size: 2em !important;
+   
+}
+
+.epidermis h3 {
+    color: #778559;
+    font-size: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.epidermis ul {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    color: #778559 !important;
+    line-height: 1.7 !important;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.epidermis li {
+    display: list-item !important;
+}
+.epidermis img{
+    max-width: auto; 
+    height: 750px !important; 
+    padding-left: 60px; 
+    padding-top:60px;
+    
+}
+.dermis-section {
     background-color: #f6fff1;
-    padding: 100px 20px 50px 20px;
-    margin-bottom: 50px;
-
-}
-.header .menu {
-    background-color: transparent;
-    color: #333;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 60px 20px;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-.header button {
-    background-color: transparent;
-    color: #333;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px 15px;  
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-}
-
-.header button:hover {
-    color: #768459;
-    transform: translateY(-2px);
-    background-color: #768459;
-}
-
-.header button::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #768459;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.header button:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-
-
-
-
-/* Left Section */
-.header_left {
-    flex: 1;
+.dermis-section .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.header_left .menu {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.basket-logo{
-    height:30px;
-    width: auto;
+.dermis-section .text-container {
+    flex: 1 1 50%;
+    padding: 20px;
 }
 
-
-
-
-
-
-/* Center Section (Logo) */
-.header_center {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dermis-section h3 {
+    color: #778559;
+    font-size: 1.5em;
 }
 
-.header_center .logo {
-    height: 100%;
-    width: auto;
-    max-height: 180px; /* Slightly less than header height for spacing */
+.dermis-section ul {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+   
+   
+    color: #778559;
+    line-height: 1.8 !important;
 }
 
-/* Right Section */
-.header_right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.dermis-section ul li {
+    display: list-item !important;
+  
 }
 
-.header_right button {
-    padding: 10px 15px;
-    margin-left: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-/* Hamburger Menu */
-.menu-container {
-    position: relative;
-    display: inline-block;
-    border: 0;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    color: #333;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px 15px;
-    text-decoration: underline;
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-}
-
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
-}
-
-.bar {
-    width: 20px;
-    height: 3px;
-    background-color: #333;
-    margin: 2px 0;
-}
-
-
-.menu-text {
-    display: inline-block;
-}
-
-
-.menu:hover {
-    color: #111;
-    transform: translateY(-2px);
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.menu::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.menu:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #d7fb9d;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 0px;
-    width: 150px;
-    z-index: 1;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #333;
-    border-radius: none;
-    transition: background-color 0.3s;
-}
-
-.dropdown-menu a:hover {
-    background-color: #66a106;
-}
-
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    margin-right: 8px;
-    margin-top: 10px;
-}
-
-.bar {
-    width: 26px;
-    height: 2px;
-    margin: 3px 0;
-    background-color: #768459;
-}
-
-.menu-container:hover .dropdown-menu {
-    display: block;
-}
-
-
-.sign-in{ 
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    display:flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-.sign-in .icon-svg {
-    margin-right: 8px;
-
-.sign-in:hover{
-    background-color: #072408;
-}
-
-/*main*/
-
-
-
-.mainpage-gif {
-    width: 100vw; /* Viewport width to ensure it takes the full width of the screen */
-    height: auto; /* Keeps the aspect ratio of the GIF intact */
-    display: block; /* Removes any inline spacing */
-    margin: 0; /* Removes any default margin */
-}
-
-.quote {
-    display: block;                /* Ensure the span behaves like a block element */
-    text-align: center;            /* Center the text horizontally */
-    font-size: 1.8em;              /* Increase font size */
-    padding-top: 100px;            /* Add padding to move it lower on the page */
-    width: 70%;                    /* Make sure it doesn't span the full width */
-    margin: 0 auto;                /* Center the block horizontally */
-    max-width: 800px;              /* Restrict the maximum width */
-    color: #768459;                /* Set color for emphasis, if desired */
-}
-
-.mission {
-    text-align: center;            /* Center the text horizontally */
-    font-size: 1.5em;              /* Increase font size for readability */
-    padding-top: 20px;             /* Add some spacing after the quote */
-    width: 70%;                    /* Limit the width */
-    margin: 0 auto;                /* Center the block horizontally */
-    max-width: 800px;              /* Restrict the maximum width */
-    line-height: 1.6;              /* Improve readability by increasing line spacing */
-    color: #333;                   /* Define a color for the text for better contrast */
-}
-
-/* Additional styles for the main container if needed */
-main {
-    padding-top: 100px;            /* Move the entire main container down */
-    padding-bottom: 50px;          /* Add some padding to the bottom for spacing */
-}
-
-a:hover {
-    background-color: #88c44f; /* A lighter green on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
-    transform: translateY(-3px); /* Move slightly up for an interactive feel */
-}
-
-
-
-
-
-/* Footer */
-.footer {
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-}
-
-
-
- .footer-content {
-    background-color: #66a106 !important;
+.dermis-section .image-container {
+    flex: 1 1 40%;
     padding: 20px;
     text-align: center;
-    width:100%;
-    height: 100px;
-    box-sizing: border-box;
-    z-index:1;
-    font-size: 20px;
-}
-
-
-
-.logo2 {
-    height: 50px;
-    width: auto;
-    margin-right: 20px;
-}
-
-.footer button {
-    padding: 10px 15px;
-    font-size: 20px;
-    margin: 0 5px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #66a106;
-    color: #fff;  /* Updated to ensure the text contrasts well with the background */
-    border: 1px solid #ccc;
-    border-radius: 4px;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-.footer button:hover {
-    color: #f6fff1; /* Light background color to contrast well with the green */
-    transform: translateY(-2px);
-    background-color: #88c44f; /* Lighter green for a nice visual change */
+.dermis-section .image-container img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 60px;
+    padding-bottom: 90px;
 }
 
-.footer button::after {
-    content: "";
+.dermis-section .image-overlay {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+    top: 20px;
+    left: 60px;
+    width: calc(100% - 60px);
+    height: 50px;
+    background-color: #f6fff1;
+}
+.subcutis-section {
+    background-color: #f0ffe7;
+    padding: 60px 20px;
+    position: relative;
 }
 
-.footer button:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+.subcutis-section .content-container {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+.subcutis-section .text-container {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.subcutis-section h3 {
+    color: #778559;
+    font-size: 1.5em;
+}
+
+.subcutis-section ul {
+    color: #778559;
+    line-height: 1.8;
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 40px;
+    margin: 20px 0;
+}
+
+.subcutis-section ul li {
+    display: list-item !important;
+    margin-bottom: 10px;
+}
+
+.subcutis-section .image-container {
+    flex: 1 1 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.subcutis-section .image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 70px;
+    border-radius: 2px;
+    transition: transform 0.3s;
+}
+
+
+
+
+.anatomy-section, .dermis-section, .subcutis-section {
+    padding: 60px 20px;
+    position: relative;
+}
+
+.anatomy-section h2, .anatomy-section h3, 
+.dermis-section h3, .subcutis-section h3 {
+    color: #778559;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.anatomy-section ul, 
+.dermis-section ul, 
+.subcutis-section ul {
+    color: #778559;
+    line-height: 1.8;
+    list-style-type: none;
+    padding: 0;
+}
+
+.anatomy-section ul li, 
+.dermis-section ul li, 
+.subcutis-section ul li {
+    margin-bottom: 10px;
+}
+
+.anatomy-content, .function-content, .nail-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.anatomy-text, .nail-text {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.anatomy-image, .nail-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.anatomy-image img, .nail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+   
+}
+
+
+
+.function-section {
+    background-color: #778559;
+    color: #f6fff1;
+    padding: 60px 20px;
+
+}
+
+.function-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.function-card {
+    flex: 1 1 30%;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.function-card h3 {
+    color: #f6fff1;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.function-card p {
+    color: #fafff8;
+    line-height: 1.2;
+}
+
+.nail-section {
+    padding: 60px 20px;
+    background-color: #fafff8;
+}
+
+.nail-section .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nail-section .text-container {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.nail-section h2 {
+    color: #778559;
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.nail-section h3 {
+    color: #778559;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    font-weight: 550;
+}
+
+.nail-section ul {
+    color: #778559;
+    line-height: 1.6;
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+  
+    margin: 20px 0;
+}
+
+.nail-section ul li {
+    display: list-item !important;
+   
+}
+
+.nail-section .image-container {
+    flex: 1 1 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.nail-section .image-container img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 110px;
+    padding-right: 60px;
+}
+
+@media (max-width: 768px) {
+   
+    html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    section, div, header {
+   
+    }
+    header {
+        width: 100%;
+        padding: 5px !important;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header h1{
+        width:100%;
+        font-size: 2em !important;
+        padding-top: 20px;
+    }
+    header p{
+        width:100%;
+        font-size: 1.2em !important;
+    }
+    
+    main{
+        margin-top:50px !important;
+        padding:0px !important;
+      
+    }
+    .dermis-section, .epidermis, .subcutis-section, .nail-section, .function-section{
+        padding:0px !important;
+    }
+
+    .epidermis .anatomy-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+
+    .epidermis .anatomy-image {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .epidermis .anatomy-image img {
+        height: 500px !important;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .epidermis .anatomy-text {
+        width: 100%;
+        padding: 0 20px;
+        text-align: left;
+    }
+    
+    .epidermis ul li {
+        display: list-item !important;
+        margin-bottom: 25px;
+    }
+
+    .dermis-section .content-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+
+    .dermis-section .image-container {
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+    }
+
+    .dermis-section .image-container img {
+        display: block !important;
+        height: 300px !important;
+        width: auto;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        
+    }
+    .dermis-section .image-overlay {
+        background-color: #f6fff1 !important;
+        position: absolute !important;
+        top: -20px !important; /* Move higher */
+        left: 0 !important;
+        width: 100% !important;
+        height: 50px !important;
+        z-index: 10 !important;
+    }
+
+    .dermis-section .text-container {
+        width: 100%;
+        padding: 0 20px;
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+    .dermis-section ul li {
+        display: list-item !important;
+        margin-bottom: 25px;
+    }
+    .subcutis-section .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .epidermis{
+        padding-bottom: 100px !important;
+    }
+    .dermis-section{
+        padding-bottom: 100px !important;
+        
+    }
+    .subcutis-section{
+        padding-bottom: 100px !important;
+    }
+
+
+    .subcutis-section .image-container {
+        order: 1;
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .subcutis-section ul li {
+        display: list-item !important;
+        margin-bottom: 25px;
+    }
+
+    .subcutis-section .image-container img {
+        height: 300px !important;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .subcutis-section .text-container {
+        width: 100%;
+        padding: 0 20px;
+        text-align: left;
+        padding-top:20px !important;
+        padding-left: 10px;
+    }
+    .function-section .function-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 0 !important;
+        
+    }
+    .function-section{
+        padding-top: 40px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .nail-section{
+        padding-top: 40px !important;
+        padding-left: 30px !important;
+        padding-right: 10px !important;
+    }
+    .function-section .function-card {
+        margin: 0;
+        padding: 20px 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nail-section .content-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nail-section .text-container {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+    .nail-section .text-container h3{
+        font-size: 1.05em;
+    }
+
+    .nail-section .image-container {
+        order: 1;
+        width: 100%;
+        margin: 20px 0 0 0;
+        text-align: center;
+        padding: 0;
+        padding-left: 50px !important;
+    }
+
+    .nail-section .image-container img {
+        height:420px;
+        width: auto;
+        margin: 0 auto;
+    }
+}
+
+
+
