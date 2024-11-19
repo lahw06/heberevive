@@ -504,10 +504,11 @@ main{
     }
 
     .subcutis-section .image-container img {
-        height: 240px !important;
+        height: 280px !important;
         width: auto;
         margin: 0 auto;
         padding-left: 10px;
+        padding-right: 10px;
     }
 
     .subcutis-section .text-container {
