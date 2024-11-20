@@ -1,171 +1,263 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f6fff1;
-    color: #3f4630;
-}
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
-    padding: 50px;
+    gap: 20px;
+    padding: 150px 20px 40px;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
 }
-h1{
-    color:#778559;
-    font-size:2.5em;
-}
-p{
-    color:#778559;
-    }
-.price{
-    color:#778559;
-    font-size: 2em;
-    font-weight: 700;
-}
-.add-to-basket{
-    background-color: #778559; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    cursor: pointer;
-    border-radius: 3px;
-    font-size: 2em;
-}
-/* Image Carousel */
+
 .image-box {
-    width: 50%;
     position: relative;
-}
-.image-box img {
-    width: 100%;
-    height: auto;
-    
-    
-}
-.carousel-controls {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    width: 450px;
+    height: auto;
+}
+
+.carousel-controls {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transform: translateY(-50%);
 }
+
 .carousel-controls button {
-    background-color: rgb(0, 0, 0, 0);
-    border: none;
-    color: #778559;
-    font-size: 3em;
-    cursor: pointer;
-    padding: 10px;
-}
-/* Description and Ingredients buttons */
-.collapsible {
-    
-}
-.collapsible button {
-    width: 1200px;
-    padding: 15px;
-    font-size: 1.2em;
     background-color: #f6fff1;
     color: #778559;
     border: none;
+    font-size: 1.5em;
     cursor: pointer;
-    text-align: left;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
-.content {
-    display: none;
-    padding: 20px;
-    background-color: #e5eed8;
+
+.carousel-controls button:hover {
+    background-color: #778559;
+    color: #f6fff1;
 }
-.content p {
-    margin: 0;
+
+
+.product {
+    flex: 1;
+    padding-left: 20px;
 }
-/* Right Side Product Details */
-.details-box {
-    width: 50%;
-}
-.details-box h1 {
-    font-size: 2.5em;
+
+.product h1 {
+    font-size: 2.2em;
     margin-bottom: 10px;
-    color:rgb(119, 133, 89, 1);;
-}
-.details-box h3 {
-    color:rgb(119, 133, 89, 0.8);
-}
-.details-box p {
-    color:rgb(119, 133, 89, 0.8);
-}
-.details-box .price {
-    font-size: 2em;
     color: #778559;
-    margin-bottom: 20px;
-    font-weight:bold;
 }
+
+.product h3 {
+    color: #778559;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.product p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #485036;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #778559;
+}
+
 .quantity {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    
+    gap: 10px;
 }
-.quantity button {
-    padding: 5px;
-    font-size: 1.5em;
-    border: none;
-    background-color: #f6fff1;
-    color: #778559;
-    cursor: pointer;
-    border-radius: 2px;
-}
-.quantity input {
-    width: 30px;
-    text-align: center;
-    font-size: 1em;
-    border: none;
-    margin: 0 10px;
-    align-items: center;
-    background-color: #f6fff1;
-    left:50%;
-    color: #778559;
-}
-.add-to-basket {
-    background-color: #778559;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-}
-.you-may-also-like {
-    margin-top: 100px;
-    align-items: center;
-    margin-bottom: 50px;
-    text-align: center;
-    color: #778559;
 
+.quantity button {
+    background-color: #f6fff1 !important;
+    color: #778559 !important;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    color: #778559;
+    background-color: #f6fff1;
+}
+.container .product button {
+    background-color: #778559;
+    color: #f6fff1;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.container .product button:hover {
+    background-color: #485036;
+}
+
+.collapsible {
+    width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #e5eed8;
+    border: 1px solid #778559;
+    cursor: pointer;
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible-title {
+    font-size: 1.5em;
+    color: #485036;
+}
+
+.toggle-icon {
+    font-size: 1.5em;
+    color: #778559;
+}
+
+.collapsible-content {
+    display: none;
+    padding-top: 15px;
+    color: #485036;
+}
+
+.collapsible-content ul {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.collapsible-content li {
+    margin-bottom: 5px;
+}
+
+.collapsible span{
+    color:#485036;
+}
+.moveitmoveit{
+    display: flex;
+    justify-content: space-between;
+}
+.ingredient-link{
+    text-decoration: none;
+    color:#485036;
+}
+.ingredient-link:hover{
+    text-decoration: none;
+    color:#000000;
+}
+
+.you-may-also-like{
+    width:1200px;
+    margin: 40px auto;
+    color: #778559;
+    align-items: center;
+    text-align: center;
+}
+
+.you-may-also-like img{
+    width:250px;
+}
+
+.you-may-also-like img:hover{
+    width:250px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.you-may-also-like p{
+   font-size: 1em;
+   text-decoration:none !important;
+   
 }
 .you-may-also-like h3{
     font-size: 2em;
+    padding-bottom: 20px;
+ }
+ .you-may-also-like p:hover{
+    text-decoration: none !important;
+    color:#000000;
 }
-.you-may-also-like a {
-    text-decoration: none;
-    color: #778559;
-    text-align: center;
-    margin-top:20px;
-    font-size: 1em !important;
+
+.you-may-also-like a{
+    text-decoration:none !important;
+   color:#778559 !important;
 }
-.you-may-also-like img{
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-.you-may-also-like p{
-    font-size: 1em;
-}
-.basket-icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 50px 10px 20px;
+    }
+
+    .image-box img {
+        width: 100%;
+    }
+
+    .product {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .product h1 {
+        font-size: 1.8em;
+    }
+
+    .product h3 {
+        font-size: 1.2em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .quantity {
+        justify-content: center;
+    }
+
+    .collapsible {
+        width: 90%;
+    }
+
+    .you-may-also-like {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .you-may-also-like img {
+        width: 150px;
+    }
+
+    .you-may-also-like h3 {
+        font-size: 1.5em;
+    }
 }
