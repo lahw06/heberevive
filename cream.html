@@ -3,29 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Hebe Revive | Original Hand Cream</title>
-    <style>
-        /* Default style for ingredient links */
-        .ingredient-link {
-            color: #778559;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-    
-        /* Hover effect for ingredient links (lighter color) */
-        .ingredient-link:hover {
-            color: #a0b07a; /* Slightly lighter color */
-        }
-    </style>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/css/cream.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Left Section: Menu -->
         <div class="header_left">
             <div class="menu-container">
-                <button class="menu" aria-label="Open Menu" style="background-color: transparent; color: #333; border: none; font-size: 18px; cursor: pointer; padding: 10px 15px; display: inline-block;">
+                <button class="menu" aria-label="Open Menu">
                     <div class="menu-icon">
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -44,148 +30,114 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Center Section: Logo -->
         <div class="header_center">
-            <a href="index.html"><img id="logo" class="logo" src="./resources/images/hebe-logo.png" alt="Hebe Revive Logo"></a>
+            <a href="index.html">
+                <img id="logo" class="logo" src="./resources/images/hebe-logo.png" alt="Hebe Revive Logo">
+            </a>
         </div>
-
-        <!-- Right Section: Search, Basket, and Sign In -->
         <div class="header_right">
-          
-                
-            <button class="basket" id= "basketIcon" aria-label="Basket" style="background-color: transparent; color: #333; border: none; font-size: 18px; cursor: pointer; padding: 10px 15px; display: inline-block;" onclick="window.location.href='basket.html'">
-                <i class="fas fa-shopping-cart"></i><img class="basket-logo" src="./resources/images/basket-logo.png">
+            <button class="basket" aria-label="Basket" onclick="window.location.href='basket.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <img class="basket-logo" src="resources/images/basket-logo.png" alt="Basket">
             </button>
-
-            
         </div>
     </header>
 
-    <main class="container" style="display: flex; justify-content: space-between;">
-        <!-- Left Side with Image and Collapsible Sections -->
-        <div class="image-box" style="flex: 1;">
-            <!-- Image Carousel -->
-            <img id="mainImage" src="resources/images/cream1.jpg" alt="Hand Cream Image" style="width: auto; height:500px;">
-            <div class="carousel-controls" style="text-align: center; margin-top: 10px;">
+    <main class="container">
+        <div class="image-box">
+            <img id="mainImage" src="resources/images/cream1.jpg" alt="Hand Cream Image">
+            <div class="carousel-controls">
                 <button onclick="prevImage()">&#10094;</button>
                 <button onclick="nextImage()">&#10095;</button>
             </div>
         </div>
-    
-            <!-- Right Side Product Details -->
-            <div class="product" style="flex: 1; padding-left: 20px; width: 200px;">
-                <h1>Original Hand Cream</h1>
-                <h3 style="color:rgba(119, 133, 89, 0.8);">50ml</h3>
-                <p style="width: 550px; padding-bottom: 30px;"><b>Sick of regular hand creams drying out your skin and keeping you stuck in a cycle of constant reapplying and buying? </b><br>That’s because of all the alcohol and synthetic chemicals they contain—luckily, you won’t find any of that here. Our original hand cream is crafted with all-natural ingredients and provides luxurious moisture. Feel renewed, like you've been touched by Hebe, the ancient Greek goddess of youth. Made using ingredients for skin health and nourishment that have been trusted for millennia from ancient Greece, ancient Egypt, ancient China, and more.</p>
-                <div class="price">£10</div>
-    
-    
 
+        <div class="product">
+            <h1>Original Hand Cream</h1>
+            <h3>50ml</h3>
+            <p><b>Sick of regular hand creams drying out your skin and keeping you stuck in a cycle of constant reapplying and buying? </b><br>That’s because of all the alcohol and synthetic chemicals they contain—luckily, you won’t find any of that here. Our original hand cream is crafted with all-natural ingredients and provides luxurious moisture. Feel renewed, like you've been touched by Hebe, the ancient Greek goddess of youth. Made using ingredients for skin health and nourishment that have been trusted for millennia from ancient Greece, ancient Egypt, ancient China, and more.</p>
+            <div class="price">£10</div>
 
+            <div class="quantity">
+                <button onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity" value="1" readonly>
+                <button onclick="increaseQuantity()">+</button>
+            </div>
 
-
-        <!-- Quantity Selector -->
-        <div class="quantity">
-            <button onclick="decreaseQuantity()">-</button>
-            <input type="number" id="quantity" value="1" readonly>
-            <button onclick="increaseQuantity()">+</button>
+            <button  onclick="addToBasket('Original Hand Cream', 10, 'resources/images/cream1.jpg')">Add to Basket</button>
         </div>
+        </div>
+    </main>
 
-        <!-- Add to Basket Button -->
-        <button onclick="addToBasket('Original Hand Cream', 10, 'resources/images/cream1.jpg')" style="background-color: #778559; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 1em; border-radius: 2px;">Add to Basket</button>
-    </div>
-
-</main>
-<div onclick="toggleContent('description-content', 'toggle-icon-description')" style="width: 1200px; margin: 20px auto; padding: 15px; background-color: #e5eed8; border: 1px solid #778559">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 1.5em;">How to Use</span>
-        <span id="toggle-icon-description" style="font-size: 1.5em; color: #778559;">+</span>
-    </div>
-    <div id="description-content" style="display: none; padding-top: 15px;">
-        <p style="margin: 0; color:black">For maximum hydration, apply a small amount to clean, dry hands and massage thoroughly until absorbed.<br>
-
-            <ul style="padding-left:20px; padding-top:10px;">
+    <div class="collapsible" onclick="toggleContent('description-content', 'toggle-icon-description')">
+        <div class="moveitmoveit">
+            <span>How to Use</span>
+            <span id="toggle-icon-description">+</span>
+        </div>
+        <div id="description-content" class="collapsible-content">
+            <p>For maximum hydration, apply a small amount to clean, dry hands and massage thoroughly until absorbed.</p>
+            <ul>
                 <li>Pay special attention to drier areas like knuckles, cuticles, and nail beds.</li>
                 <li>Use in the morning, before bed, after washing your hands, and after showering.</li>
                 <li>Apply as often as needed throughout the day, particularly in colder months when skin tends to become drier.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="collapsible" onclick="toggleContent('ingredients-content', 'toggle-icon-ingredients')">
+        <div class="moveitmoveit">
+            <span>Ingredients</span>
+            <span id="toggle-icon-ingredients">+</span>
+        </div>
+        <div id="ingredients-content" class="collapsible-content">
+            <p>
+                <a href="ingredients.html#water" class="ingredient-link">Aqua (Water)</a>, 
+                <a href="ingredients.html#shea-butter" class="ingredient-link">Butyrospermum Parkii (Shea Butter)</a>, 
+                <a href="ingredients.html#olive-oil" class="ingredient-link">Olea Europaea (Olive) Fruit Oil</a>, 
+                <a href="ingredients.html#jojoba-oil" class="ingredient-link">Simmondsia Chinensis (Jojoba) Seed Oil</a>, 
+                <a href="ingredients.html#sweet-almond-oil" class="ingredient-link">Prunus Amygdalus Dulcis (Sweet Almond) Oil</a>, 
+                <a href="ingredients.html#black-seed-oil" class="ingredient-link">Nigella Sativa (Black Seed) Oil</a>, 
+                <a href="ingredients.html#biotin" class="ingredient-link">Biotin</a>, 
+                <a href="ingredients.html#collagen" class="ingredient-link">Hydrolyzed Collagen</a>, 
+                <a href="ingredients.html#leucidal-liquid" class="ingredient-link">Leuconostoc/Radish Root Ferment Filtrate (Leucidal Liquid)</a>
             </p>
-    </div>
-</div>
-
-<!-- Ingredients Section -->
-<div onclick="toggleContent('ingredients-content', 'toggle-icon-ingredients')" style="width: 1200px; margin: 20px auto; padding: 15px; background-color: #e5eed8; border: 1px solid #778559; position: relative; cursor: pointer;">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 1.5em;">Ingredients</span>
-        <span id="toggle-icon-ingredients" style="font-size: 1.5em; color: #778559;">+</span>
-    </div>
-    <div id="ingredients-content" style="display: none; padding-top: 15px;">
-        <p style="margin: 0;">  
-            <a href="ingredients.html#water" class="ingredient-link">Aqua (Water)</a>, 
-            <a href="ingredients.html#shea-butter" class="ingredient-link">Butyrospermum Parkii (Shea Butter)</a>, 
-            <a href="ingredients.html#olive-oil" class="ingredient-link">Olea Europaea (Olive) Fruit Oil</a>, 
-            <a href="ingredients.html#jojoba-oil" class="ingredient-link">Simmondsia Chinensis (Jojoba) Seed Oil</a>, 
-            <a href="ingredients.html#sweet-almond-oil" class="ingredient-link">Prunus Amygdalus Dulcis (Sweet Almond) Oil</a>, 
-            <a href="ingredients.html#black-seed-oil" class="ingredient-link">Nigella Sativa (Black Seed) Oil</a>, 
-            <a href="ingredients.html#biotin" class="ingredient-link">Biotin</a>, 
-            <a href="ingredients.html#collagen" class="ingredient-link">Hydrolyzed Collagen</a>, 
-            <a href="ingredients.html#leucidal-liquid" class="ingredient-link">Leuconostoc/Radish Root Ferment Filtrate (Leucidal Liquid)</a>
-        </p>
-    </div>
-</div>
-
-<div class="you-may-also-like" style="width: 1200px; margin: 40px auto;">
-    <h3><b>You May Also Like...</b></h3>
-    <a href="scrub.html">
-        <img src="resources/images/scrub1.jpg" alt="Nail Growth Scrub" style="width: 250px;">
-        <p style="font-size: 1em;">Nail Growth Scrub<br>20ml<br>£15</p>
-    </a>
-</div>
-
-<div class="footer">
-    <footer style= "padding: 10px 20px; text-align: center; width: 100%; height: 160px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; background-color: #768459;">
-        
-        <!-- Left Section: Contact Us, FAQs, Suggestions -->
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-top: auto; margin-bottom: auto;">
-            <div style="position: relative; display: inline-block;">
-                <button class="contact" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='contact.html'">Contact Us</button>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <button class="faqs" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='faq.html'">FAQs</button>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <button class="suggestions" style="padding: 8px 12px; font-size: 16px; cursor: pointer; background-color: #768459; color: #f6fff1; border: none; border-radius: 4px; transition: transform 0.3s ease;" onclick="window.location.href='suggestions.html'">Suggestions</button>
-            </div>
         </div>
+    </div>
 
-        <!-- Center Section: Social Media Icons (To be added later) -->
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <!-- Social Media Icons -->
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.facebook.com/profile.php?id=61566522524385"><img src="resources/images/fb-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.instagram.com/hebe_revive/profilecard/?igsh=MWZ6b3l4bGp0cGFqMQ=="><img src="resources/images/insta-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.tiktok.com/@hebe_revive"><img src="resources/images/tiktok-logo.png" style="height: 50px; width: 50px;"></a>
-            </div>
-            <div class="social-icon" style="margin: 0 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform = 'translateY(-2px)'" onmouseout="this.style.transform = 'translateY(0px)';">
-                <a href="https://www.youtube.com/channel/UCfIiZ2Pf_ioMMIif97nMxow"><img src="resources/images/youtube-logo.png" ></a>
-            </div>
+    <div class="you-may-also-like">
+        <h3><b>You May Also Like...</b></h3>
+        <a href="scrub.html">
+            <img src="resources/images/scrub1.jpg" alt="Nail Growth Scrub">
+            <p style="text-decoration: none !important;">Nail Growth Scrub<br>20ml<br>£15</p>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="faq.html" class="footer-link">FAQs</a>
+            <a href="suggestions.html" class="footer-link">Suggestions</a>
         </div>
-        
-
-        <!-- Right Section: Logo -->
-        <a href="index.html"><img class="logo2" src="./resources/images/hebe-logo2.png" alt="Footer Logo" style="height: 120px; width: auto; border: none; border-radius: 8px; margin-left: 20px;"></a>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61566522524385">
+                <img src="resources/images/fb-logo.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/hebe_revive/profilecard/?igsh=MWZ6b3l4bGp0cGFqMQ==">
+                <img src="resources/images/insta-logo.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@hebe_revive">
+                <img src="resources/images/tiktok-logo.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/channel/UCfIiZ2Pf_ioMMIif97nMxow" class="youtube">
+                <img src="resources/images/youtube-logo.png" alt="YouTube">
+            </a>
+        </div>
+        <a href="index.html">
+            <img class="logo2" src="./resources/images/hebe-logo2.png" alt="Footer Logo">
+        </a>
     </footer>
-</div>
     <script src="resources/javascript/products.js"></script>
     <script src="resources/javascript/footer-effects.js"></script>
     <script src="resources/javascript/basket.js"></script>
-    
-    <!-- Inline JavaScript -->
-    
 </body>
 </html>
