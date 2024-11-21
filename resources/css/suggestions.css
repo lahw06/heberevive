@@ -87,6 +87,9 @@ main{
 .suggestions-container button:hover {
     background-color: #66a007;
 }
+form textarea{
+    height:150px;
+}
 
 #popup {
     display: none;
