@@ -113,20 +113,14 @@
     </footer>
     </div>
 
-    <script>
-        const form = document.getElementById('contactForm');
-        const popup = document.getElementById('popup');
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+        setTimeout(() => {
+            e.target.reset();
+        }, 50); // Slight delay to ensure form submission is processed
+    });
+</script>
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            popup.style.display = 'block';
-            form.reset();
-        });
-
-        function closePopup() {
-            popup.style.display = 'none';
-        }
-    </script>
     <script src="resources/javascript/faq.js"></script>
     <script src="resources/javascript/footer-effects.js"></script>
 </body>
