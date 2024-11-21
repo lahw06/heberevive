@@ -20,7 +20,7 @@
                     <span class="menu-text"></span>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="index.html">Home</a>
+                    <a href="main.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="cream.html">Hand Cream</a>
                     <a href="scrub.html">Nail Growth Scrub</a>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="header_center">
-            <a href="index.html">
+            <a href="main.html">
                 <img id="logo" class="logo" src="./resources/images/hebe-logo.png" alt="Hebe Revive Logo">
             </a>
         </div>
@@ -53,14 +53,17 @@
                 <li>Developing a full-body lotion</li>
                 <li>Formulating a hydrating lip balm</li>
             </ul>
-            <form id="suggestionForm" action="suggestion.php" method="POST">
-                <textarea name="suggestion" placeholder="Your Suggestions" rows="5" required></textarea>
+            <form
+                 action="https://formspree.io/f/xeoqzvne"
+                 method="POST"
+>
+                  
+                 
+                    <textarea name="message" placeholder="Your Suggestions" required></textarea>
+                  </label>
                 <button type="submit" onmouseover="this.style.transform = 'scale(1.01)';" onmouseout="this.style.transform='scale(1)';">
                     Submit
                 </button>
-            </form>
-        </div>
-    </div>
 
     <div id="popup">
         <p>Thank you so much for your suggestions! We truly value your input and will do our best to bring your ideas to life.</p>
@@ -93,18 +96,11 @@
     </footer>
 
     <script>
-        const form = document.getElementById('suggestionForm');
-        const popup = document.getElementById('popup');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            popup.style.display = 'block';
-            form.reset();
+        document.querySelector('form').addEventListener('submit', function (e) {
+            setTimeout(() => {
+                e.target.reset();
+            }, 50); // Slight delay to ensure form submission is processed
         });
-
-        function closePopup() {
-            popup.style.display = 'none';
-        }
     </script>
 </body>
 </html>
