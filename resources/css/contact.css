@@ -1,7 +1,3 @@
-/* contact.css */
-
-/* General Styles */
-
 .contact-main {
     display: flex;
     justify-content: center;
@@ -12,7 +8,7 @@
     margin-bottom: 100px;
 }
 
-.contact-container {
+.container {
     max-width: 1000px;
     width: 100%;
     padding: 40px;
@@ -20,32 +16,29 @@
     border-radius: 2px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding-bottom: 20px;
- 
-   
 }
 
-.contact-container h1 {
+.container h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #778559;
 }
 
-.contact-container p {
+.container p {
     margin-bottom: 30px;
     font-size: 1.2em;
     color: #778559;
 }
 
-form#contactForm {
+form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-form#contactForm input,
-form#contactForm textarea {
+form input,
+form textarea {
     border: 1px solid #778559;
     border-radius: 2px;
     padding: 15px;
@@ -53,18 +46,20 @@ form#contactForm textarea {
     color: #778559;
     transition: border-color 0.3s ease;
     width: 100%;
+   
+}
+form textarea{
+    height:150px;
 }
 
-form#contactForm input:focus,
-form#contactForm textarea:focus {
+form input:focus,
+form textarea:focus {
     border: 2px solid #778559;
     outline: none;
 }
-form#contactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+
+form label {
+    width: 100%;
 }
 
 
