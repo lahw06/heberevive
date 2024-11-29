@@ -197,4 +197,7 @@ form#contactForm button:hover {
     input{
         margin-bottom: 22px;
 }
+    .header {
+    margin-bottom: 10px !important;
+    }
 }
