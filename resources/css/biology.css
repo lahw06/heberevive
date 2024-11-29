@@ -379,6 +379,7 @@ main{
     .intro-header p{
         width:100%;
         font-size: 1.2em !important;
+        padding-bottom: 15px;
     }
     
     main{
