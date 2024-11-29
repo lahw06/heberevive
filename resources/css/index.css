@@ -20,15 +20,25 @@ body {
     width: 100%;
     height: 200px;
     background-color: #f6fff1;
-    padding: 100px 20px 50px;
-   
-    padding-top: 170px;
-}
-
-.header .menu-container {
+    
     position: relative;
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
-
+.header_center {
+    margin: 0 auto;
+    font-size: 24px;
+    color: #768459;
+    text-align: center;
+    position: absolute;
+   
+    left: 35%;
+   
+}
+.menu-container {
+    position: absolute;
+    left: 20px;
+}
 .menu {
     display: flex;
     align-items: center;
@@ -67,7 +77,8 @@ body {
     left: 0;
     background-color: #e6fdda;
     width: 200px;
-    z-index: 1;
+    
+    z-index: 20;
 }
 
 .dropdown-menu a {
@@ -253,33 +264,46 @@ body {
     .header {
         flex-direction: row;
         align-items: center;
-       margin-top:0;
-       padding-top:50px;
+        display: flex;
+        margin-top:0;
+        padding-top:50px;
+        margin-bottom: 50px;
         height: auto;
+        position: relative;
     }
 
     .logo {
         margin-bottom: 10px;
-        width:200px;
+      
+        margin-top: 20px;
+        padding-top: 50px;
+        padding-left: 100px;
+        margin-left:50px;
+        width:280px;
+        padding-left: 0;
+        margin-left: 0;
+        position: static;
+        transform: translateX(-25%);
+       
     
         
     }
 
-    .menu-container, .basket {
+    .menu-container {
         display: flex;
         justify-content: center;
         align-items: center;
      
     }
 
-    .menu, .basket {
+    .menu {
         font-size: 16px;
         padding: 8px 0px;
         display: inline-block;
     }
 
     .menu {
-     margin:0;
+     margin-top:20px;
      padding:0;
     }
 
