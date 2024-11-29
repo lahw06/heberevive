@@ -355,6 +355,9 @@ main{
        
         box-sizing: border-box;
     }
+    .header {
+    margin-bottom: 10px !important;
+    }
 
    
     
