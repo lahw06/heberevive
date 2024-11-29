@@ -261,4 +261,7 @@
     .you-may-also-like h3 {
         font-size: 1.5em;
     }
+    .header {
+    margin-bottom: 10px !important;
+    }
 }
