@@ -138,6 +138,16 @@
     #button-container {
         max-width: 100%;
     }
+    .header {
+    margin-bottom: 10px !important;
+    }
+    .faq-not-found{
+    display:none;
+}
+
+.no-phone{
+    display:none !important;
+}
 
 
 }
