@@ -1,4 +1,4 @@
-let images = ['resources/images/cream1.jpg', 'resources/images/cream2.jpg', 'resources/images/cream 3.jpg'];
+let images = ['resources/images/cream1.webp', 'resources/images/cream2.webp', 'resources/images/cream 3.webp'];
         let currentImageIndex = 0;
 
         function showImage(index) {
