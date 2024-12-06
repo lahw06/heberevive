@@ -1,6 +1,6 @@
 
         // Image Carousel
-        let images = ['resources/images/scrub1.jpg', 'resources/images/scrub2.jpg', 'resources/images/scrub3.jpg'];
+        let images = ['resources/images/scrub1.webp', 'resources/images/scrub2.webp', 'resources/images/scrub3.webp'];
         let currentImageIndex = 0;
 
         function showImage(index) {
