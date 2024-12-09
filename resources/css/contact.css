@@ -141,8 +141,8 @@ form#contactForm button:hover {
         width: 100%;
         margin: 0;
         padding: 15px;
-        padding-top: 0;
-        margin-bottom: 40px;
+        padding-top: 100px;
+        margin-bottom: 400px;
     }
 
     .container {
