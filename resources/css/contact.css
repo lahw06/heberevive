@@ -117,19 +117,37 @@ form#contactForm button:hover {
 
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .contact-container {
-        padding: 10px 15px;
+        padding: 100px 15px;
+        margin-top:200px
        
       
     }
     .contact-main{
-      margin-top: 230px;
-        margin-bottom: 180px;
-        padding-bottom:200px;
+      margin-top: 270px;
+        margin-bottom: 480px;
+        padding-bottom:80px;
     }
+    .form{
+        align-items: center;
+        text-align: center;
 
+    }
+    .input{
+        align-items: center;
+        padding-right: 50px;
+        text-align: center;
+        margin-right: 50px;
+    }
+    .form label{
+        text-align: center;
+        align-items: center;
+        width:50px !important;
+    }
+    label{
+        max-width: 205px;
+    }
     .contact-container h1 {
         font-size: 2em;
     }
