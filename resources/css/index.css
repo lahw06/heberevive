@@ -262,11 +262,14 @@ body {
     text-align: center !important;
     margin:0;
     padding: 0;
-   
+}
+.footer-bottom a{
+    text-decoration: none;
+    color: white;
 }
 .footer-bottom p{
     margin:0;
-    padding: 15px 0 !important;
+    padding: 10px 0 !important;
 }
 
 
