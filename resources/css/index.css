@@ -257,16 +257,16 @@ body {
     border-radius: 8px;
 }
 .footer-bottom{
-    color:white;
-    background-color: #000;
-    text-align: center;
+    color:white !important;
+    background-color: #000 !important;
+    text-align: center !important;
     margin:0;
     padding: 0;
    
 }
 .footer-bottom p{
     margin:0;
-    padding: 15px 0;
+    padding: 15px 0 !important;
 }
 
 
