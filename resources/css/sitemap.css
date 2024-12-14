@@ -10,7 +10,7 @@ body {
 .sitemap-container {
     max-width: 600px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .sitemap-container h1 {
