@@ -10,34 +10,35 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f6fff1;
-    color: #778559;
+    background-color: #F9FFF6;
+    color: #4a5d40;
     text-align: center;
     padding: 12px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     z-index: 1000;
-    border-bottom: 3px solid #778559;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #4a5d40;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
-.top-banner a {
-    color: #778559;
+.cta-button {
+    color: #4a5d40;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #778559;
-    padding: 5px 10px;
+    border: 2px solid #4a5d40;
+    padding: 5px 12px;
     border-radius: 20px;
     margin-left: 10px;
+    display: inline-block;
     transition: all 0.3s ease;
 }
 
-.top-banner a:hover {
-    background-color: #778559;
-    color: #f6fff1;
+.cta-button:hover {
+    background-color: #4a5d40;
+    color: #F9FFF6;
 }
+
 /* Body */
 body {
     background-color: #f6fff1;
