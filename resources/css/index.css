@@ -297,6 +297,23 @@ body {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+        .top-banner {
+            font-size: 1rem;
+            padding: 8px;
+            text-align: center;
+            flex-direction: column;
+            text-decoration: none !important;
+        }
+    
+        .top-banner a {
+            display: block;
+            margin-top: 8px;
+            font-size: 1rem;
+            text-decoration: none !important;
+        }
+    }
+    
     .header {
         display: flex;
         flex-direction: row;
