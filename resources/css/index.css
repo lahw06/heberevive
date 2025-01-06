@@ -13,7 +13,7 @@
     background-color: #F9FFF6;
     color: #4a5d40;
     text-align: center;
-    padding: 12px 20px;
+    padding: 5px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     z-index: 1000;
@@ -55,7 +55,7 @@ body {
     background-color: #f6fff1;
     
     position: relative;
-    padding-top: 200px;
+    padding-top: 250px;
     padding-bottom: 50px;
 }
 .header_center {
