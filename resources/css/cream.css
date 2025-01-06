@@ -72,6 +72,11 @@
     line-height: 1.5;
     color: #485036;
 }
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .price {
     font-size: 1.5em;
@@ -81,6 +86,8 @@
 }
 .discount {
     position: relative;
+    font-weight:400;
+    font-size: 1.4em;
 }
 
 .discount::after {
