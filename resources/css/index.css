@@ -5,7 +5,28 @@
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6fff1;
+    color: #778559;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #778559;
+}
 
+.top-banner a {
+    color: #778559;
+
+    font-weight: bold;
+    margin-left: 10px;
+}
 /* Body */
 body {
     background-color: #f6fff1;

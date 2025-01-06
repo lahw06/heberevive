@@ -87,8 +87,8 @@
 .discount {
     position: relative;
     font-weight:400;
-    font-size: 1.2em;
-    color: #485036;
+    font-size: 1.3em;
+    color: #646e4f;
 }
 
 .discount::after {
@@ -98,7 +98,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: #485036;
+    background: #646e4f;
     transform: rotate(-15deg); 
     transform-origin: center;
 }
