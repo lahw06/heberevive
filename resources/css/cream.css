@@ -79,6 +79,21 @@
     margin-bottom: 20px;
     color: #778559;
 }
+.discount {
+    position: relative;
+}
+
+.discount::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #778559;
+    transform: rotate(-15deg); 
+    transform-origin: center;
+}
 
 .quantity {
     display: flex;
