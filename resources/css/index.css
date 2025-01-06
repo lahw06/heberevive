@@ -23,7 +23,6 @@
 
 .top-banner a {
     color: #778559;
-
     font-weight: bold;
     margin-left: 10px;
 }
@@ -43,7 +42,7 @@ body {
     background-color: #f6fff1;
     
     position: relative;
-    padding-top: 150px;
+    padding-top: 200px;
     padding-bottom: 50px;
 }
 .header_center {
